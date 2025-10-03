@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CAPE Institute of Technology — Huntrix 2K25</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body{
+      margin:0;
+      font-family:"Poppins", sans-serif;
+      background: url('college.jpg') no-repeat center center/cover;
+      color:#fff;
+    }
+    .overlay{
+      background:rgba(122, 120, 120, 0.3); /* light overlay to keep text visible */
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+      align-items:center;
+      padding:30px 15px;
+    }
+    h1{
+      font-size:clamp(28px,4vw,44px);
+      font-weight:800;
+      text-align:center;
+      color:#fff;
+      text-shadow:0 0 10px rgba(0,0,0,0.8);
+      margin-bottom:10px;
+    }
+    h2{
+      font-size:clamp(20px,2.5vw,32px);
+      font-weight:700;
+      text-align:center;
+      color:#00ff99;
+      text-shadow:0 0 6px rgba(0,0,0,0.8);
+      margin-bottom:20px;
+    }
+    .lead{
+      max-width:900px;
+      text-align:center;
+      font-size:18px;
+      line-height:1.6;
+      color:#f1f5f9;
+      text-shadow:0 0 6px rgba(0,0,0,0.7);
+      margin-bottom:30px;
+    }
+    .glass{
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.2);
+      border-radius:16px;
+      padding:20px;
+      backdrop-filter: blur(8px);
+      margin-bottom:40px;
+      max-width:1100px;
+      width:100%;
+    }
+    .topline{
+      height:2px;
+      background:linear-gradient(90deg, transparent, #60a5fa, transparent);
+      margin:8px 0 20px 0;
+    }
+    .team{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:18px;
+    }
+    .person{
+      border-radius:14px;
+      overflow:hidden;
+      background:rgba(0,0,0,0.3);
+      border:1px solid rgba(236, 218, 218, 0.2);
+    }
+    .photo{
+      position:relative;
+      aspect-ratio:4/3;
+    }
+    .photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+    .name-on-photo{
+      position:absolute;
+      bottom:0;
+      left:0;right:0;
+      padding:8px 12px;
+      background:linear-gradient(180deg,transparent,rgba(0,0,0,0.7));
+      color:#fff;
+      font-weight:700;
+    }
+    .role{
+      text-align:center;
+      padding:12px;
+      font-weight:600;
+      color:#e2e8f0;
+      border-top:1px dashed rgba(255,255,255,0.3);
+    }
+    .next-btn{
+      display:inline-block;
+      padding:12px 28px;
+      font-size:16px;
+      font-weight:600;
+      color:#fff;
+      background:#2563eb;
+      border:none;
+      border-radius:30px;
+      text-decoration:none;
+      box-shadow:0 4px 12px rgba(200, 175, 175, 0.4);
+      transition:0.2s;
+    }
+    .next-btn:hover{
+      background:#1d4ed8;
+      transform:translateY(-2px);
+    }
+    .btn-wrap{
+      text-align:center;
+      margin:30px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>CAPE INSTITUTE OF TECHNOLOGY</h1>
+    <h2>Huntrix 2K25</h2>
+    <p class="lead">
+      <strong>CAPE INSTITUTE OF TECHNOLOGY</strong> Proudly Presents <strong>HUNTRIX 2K25</strong> — a celebration of innovation, knowledge, and talent. Empowering young minds through excellence in technical education and creativity.
+    </p>
+
+    <section class="glass">
+      <div class="topline"></div>
+      <div class="team">
+        <article class="person">
+          <div class="photo">
+            <img src="chairman.jpg" alt="Chairman" onerror="this.src='https://placehold.co/600x450?text=Photo'">
+            <div class="name-on-photo">Thiru. I. Krishnapillai</div>
+          </div>
+          <div class="role">Chairman</div>
+        </article>
+        <article class="person">
+          <div class="photo">
+            <img src="PROCHAIRMAN.jpg" alt="Pro Chairman" onerror="this.src='https://placehold.co/600x450?text=Photo'">
+            <div class="name-on-photo">Dr. K. V. Iyappa Karthick</div>
+          </div>
+          <div class="role">Pro Chairman</div>
+        </article>
+        <article class="person">
+          <div class="photo">
+            <img src="ceo.jpg" alt="CEO" onerror="this.src='https://placehold.co/600x450?text=Photo'">
+            <div class="name-on-photo">Er.J.B Renin</div>
+          </div>
+          <div class="role">CEO</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Next Button -->
+    <div class="btn-wrap">
+      <a href="open.html" class="next-btn">Next</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huntrix Fest</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('clg 5.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+        .overlay {
+            background: rgba(0,0,0,0.6);
+            min-height: 100vh;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1, h2 {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .day-section {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .events {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .event {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .event img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 10px;
+        }
+        .points {
+            text-align: left;
+            max-width: 500px;
+            margin: 10px auto;
+        }
+        .points li {
+            margin-bottom: 10px;
+        }
+
+        /* Navigation Buttons */
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .buttons a {
+            text-decoration: none;
+        }
+        .buttons button {
+            padding: 18px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #1E90FF; /* blue color */
+            color: #fff;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .buttons button:hover {
+            background-color: #569de5;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <!-- Top Heading -->
+        <h1>Huntrix</h1>
+
+        <!-- Day 1 Technical Fest -->
+        <div class="day-section">
+            <h2>Day 1: Technical Fest</h2>
+            <div class="events">
+                <div class="event">
+                    <img src="tech.jpeg" alt="Technical Event">
+                    <p>Technical Event</p>
+                </div>
+                <div class="event">
+                    <img src="non tech.jpg" alt="Non-Technical Event">
+                    <p>Non-Technical Event</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 Culturals (English) -->
+        <div class="day-section">
+            <h2>Day 2: Culturals</h2>
+            <div class="points">
+                <ul>
+                    <li>Inauguration & Welcome Address</li>
+                    <li>Singari Melam</li>
+                    <li>Solo Dance & Group Dance</li>
+                    <li>Singing</li>
+                    <li>Prize Distribution</li>
+                    <li>Car Show</li>
+                    <li>Symposium Calibration With Banner Opening</li>
+                    <li>Indoor DJ Show</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="buttons">
+            <a href="open.html"><button>Back</button></a>
+            <a href="event.html"><button>Next</button></a>
+        </div>
+
+    </div>
+</body>
+</html>

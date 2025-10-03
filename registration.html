@@ -1,0 +1,129 @@
+<section id="page7" 
+style="display:flex; min-height:100vh; 
+       background: url('clg 4.jpg') no-repeat center center fixed; 
+       background-size: cover; 
+       justify-content:center; align-items:center; padding:20px;">
+  <div style="background:#ffffffee; padding:20px; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.3); width:100%; max-width:900px;">
+    <h1 style="text-align:center; margin-bottom:20px; color:#2c3e50;">Registration Form</h1>
+    <div style="display:flex; gap:20px; flex-wrap:wrap;">
+      
+      <!-- Left: Form -->
+      <div style="flex:2; min-width:300px;">
+        <form id="regForm" style="display:flex; flex-direction:column; gap:15px;">
+          <input type="text" name="fullname" placeholder="Full Name" required style="padding:10px; border:1px solid #ccc; border-radius:8px;">
+          <input type="text" name="college" placeholder="College Name" required style="padding:10px; border:1px solid #ccc; border-radius:8px;">
+          <input type="text" name="department" placeholder="Department" required style="padding:10px; border:1px solid #ccc; border-radius:8px;">
+          <input type="text" name="year" placeholder="Year" required style="padding:10px; border:1px solid #ccc; border-radius:8px;">
+          <input type="email" name="email" placeholder="Email" required style="padding:10px; border:1px solid #ccc; border-radius:8px;">
+          <input type="tel" name="phone" placeholder="Phone Number" required pattern="[0-9]{10}" style="padding:10px; border:1px solid #ccc; border-radius:8px;">
+
+          <!-- Technical Events -->
+          <label style="font-weight:bold;">Technical Events:</label>
+          <div style="max-height:150px; overflow-y:auto; border:1px solid #ccc; padding:8px; border-radius:8px;">
+            <label><input type="checkbox" name="techEvents" value="Kahoot Live Quiz"> Kahoot Live Quiz</label><br>
+            <label><input type="checkbox" name="techEvents" value="Slide to Shine"> Slide to Shine</label><br>
+            <label><input type="checkbox" name="techEvents" value="Ink & Imagination"> Ink & Imagination</label><br>
+            <label><input type="checkbox" name="techEvents" value="Netscape Ninja"> Netscape Ninja</label><br>
+            <label><input type="checkbox" name="techEvents" value="Fix-it-Fest"> Fix-it-Fest</label><br>
+            <label><input type="checkbox" name="techEvents" value="Bug Busters"> Bug Busters</label><br>
+          </div>
+
+          <!-- Non-Technical Events -->
+          <label style="font-weight:bold;">Non-Technical Events:</label>
+          <div style="max-height:150px; overflow-y:auto; border:1px solid #ccc; padding:8px; border-radius:8px;">
+            <label><input type="checkbox" name="nonTechEvents" value="Loot & Shoot"> Loot & Shoot</label><br>
+            <label><input type="checkbox" name="nonTechEvents" value="BGM HUNT"> BGM HUNT</label><br>
+            <label><input type="checkbox" name="nonTechEvents" value="Click-a-Thon"> Click-a-Thon</label><br>
+            <label><input type="checkbox" name="nonTechEvents" value="Dumb Charades"> Dumb Charades</label><br>
+            <label><input type="checkbox" name="nonTechEvents" value="Clue in the View"> Clue in the View</label><br>
+          </div>
+
+          <!-- Payment -->
+          <label style="font-weight:bold;">Payment Method:</label>
+          <select name="payment" required style="padding:10px; border:1px solid #ccc; border-radius:8px;">
+            <option value="">-- Select Payment Method --</option>
+            <option value="UPI">UPI</option>
+            <option value="Cash">Cash</option>
+          </select>
+
+          <div id="upiField" style="display:none; text-align:center;">
+            <h4>Pay Using UPI</h4>
+            <img src="jeni qr code.jpg" alt="UPI QR Code" style="width:150px; margin-bottom:10px;">
+            <p>UPI ID: <b>antonyjenifer2000-1@okaxis</b></p>
+            <label>Enter UPI Transaction ID:</label>
+            <input type="text" name="upiTxn" placeholder="Ex: T2025XXXXXX" style="padding:10px; border:1px solid #ccc; border-radius:8px;">
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" style="padding:14px; background:#ae97d8; color:#180000; border:none; border-radius:8px; font-size:1.1em; cursor:pointer; transition: background 0.3s;">
+            Submit Registration
+          </button>
+
+          <!-- Centered Back and Next Buttons -->
+          <div style="display:flex; justify-content:center; gap:20px; margin-top:10px;">
+            <a href="coordinator.html">
+              <button type="button" style="padding:12px 20px; background:#c8a2ff; color:#000; border:none; border-radius:8px; cursor:pointer; font-size:1em;">Back</button>
+            </a>
+            <a href="final.html">
+              <button type="button" style="padding:12px 20px; background:#c8a2ff; color:#000; border:none; border-radius:8px; cursor:pointer; font-size:1em;">Next</button>
+            </a>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Right: QR -->
+      <div style="flex:1; min-width:200px; text-align:center;">
+        <h3>Scan to Pay</h3>
+        <img src="jeni qr code.jpg" alt="QR Code" style="width:150px; border:2px solid #ccc; border-radius:8px;">
+        <p>UPI ID: <b>antonyjenifer2000-1@okaxis</b></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  // Show/hide UPI when payment changes
+  document.querySelector("select[name='payment']").addEventListener("change", function () {
+    document.getElementById("upiField").style.display = (this.value === "UPI") ? "block" : "none";
+  });
+
+  // Submit handler
+  document.getElementById("regForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const form = e.target;
+
+    // Collect values
+    const fullname = form.fullname.value;
+    const college = form.college.value;
+    const department = form.department.value;
+    const year = form.year.value;
+    const email = form.email.value;
+    const phone = form.phone.value;
+
+    // Multiple checkboxes
+    const techEvents = Array.from(document.querySelectorAll("input[name='techEvents']:checked")).map(cb => cb.value);
+    const nonTechEvents = Array.from(document.querySelectorAll("input[name='nonTechEvents']:checked")).map(cb => cb.value);
+
+    const payment = form.payment.value;
+    const upiTxn = form.upiTxn?.value || "";
+
+    // Send to backend API
+    fetch("http://localhost:3000/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ fullname, college, department, year, email, phone, techEvents, nonTechEvents, payment, upiTxn })
+    })
+      .then(res => res.json())
+      .then(data => {
+        alert(data.message); // show success message
+        form.reset();
+        document.getElementById("upiField").style.display = "none";
+      })
+      .catch(err => {
+        console.error(err);
+        alert("Registration failed. Please try again.");
+      });
+  });
+</script>

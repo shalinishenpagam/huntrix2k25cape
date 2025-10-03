@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coordinator Details</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url("clg 7.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin: 30px 0 20px 0;
+      font-size: 2.8rem;
+      color: #00ffff;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .box {
+      width: 320px;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px cyan;
+      text-align: left;
+    }
+
+    .box h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #00ffcc;
+    }
+
+    .event {
+      margin: 8px 0;
+      font-size: 1rem;
+    }
+
+    .buttons {
+      margin: 30px 0;
+      text-align: center;
+    }
+
+    .buttons button {
+      background: cyan;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .buttons button:hover {
+      background: #008b8b;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Coordinator Details</h1>
+
+  <div class="container">
+    <!-- Technical Events -->
+    <div class="box">
+      <h2>Technical Events</h2>
+      <div class="event">1. Kahoot Live Quiz - Ms.Afrin Nisha &  Ms.Saraswathi</div>
+      <div class="event">2. Slide to Shine - Ms.Rethisha & Ms. Vinothini & Ms. Punitha</div>
+      <div class="event">3. Ink & Imagination - Mr.gugan & mr.Surender</div>
+      <div class="event">4. Netscape Ninja- Ms.Nivetha & Ms. Santhiya</div>
+      <div class="event">5. Fix-it-Fest - Mr.Rabinth Mohan & Mr. Senthil kumar</div>
+      <div class="event">6. Bug Busters  - Ms.Punitha & Ms. Nandhini</div>
+    </div>
+
+    <!-- Non-Technical Events -->
+    <div class="box">
+      <h2>Non-Technical Events</h2>
+      <div class="event">1. Loot & Shoot- Mr. Sakthivel & Mr.Suresh & Mr.Mahesh Kumar</div>
+      <div class="event">2. BGM HUNT - Ms.Punitha & Ms.Nandhini</div>
+      <div class="event">3. Click-a-Thon- Mr.Rajkumar & Mr.Saran</div>
+      <div class="event">4. Clue in the view- Mr.Sonesh & Mr. Muralikaran</div>
+    </div>
+  </div>
+
+  <!-- Back and Next Buttons -->
+  <div class="buttons">
+    <a href ="event.html"</a>
+    <button onclick="history.back()">Back</button>
+    <a href ="registration.html"</a>
+    <button onclick="window.location.href='nextpage.html'">Next</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+const body = document.getElementById('body');
+
+const backgrounds = [
+  'url("images/clg 1.jpg")',
+  'url("images/clg 2.jpg")',
+  'url("images/clg 3.jpg")',
+  'url("images/clg 4.jpg")',
+  'url("images/clg 5.jpg")',
+  'url("images/clg 6.jpg")',
+  'url("images/clg 7.jpg")',
+  'url("images/clg 8.jpg")'
+];
+
+let current = 0;
+
+function changeBackground() {
+  current = (current + 1) % backgrounds.length;
+  body.style.backgroundImage = backgrounds[current];
+}
+
+// Initial background
+body.style.backgroundImage = backgrounds[current];
+
+// Change background every 5 seconds
+setInterval(changeBackground, 5000);
